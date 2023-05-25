@@ -1,0 +1,260 @@
+{
+  "lookup_azure_locations": {
+    "asia": {
+      "Shortcode": "AS",
+      "DisplayName": "Asia"
+    },
+    "asiapacific": {
+      "Shortcode": "ASP",
+      "DisplayName": "Asia Pacific"
+    },
+    "australia": {
+      "Shortcode": "AU",
+      "DisplayName": "Australia"
+    },
+    "australiacentral": {
+      "Shortcode": "AUC",
+      "DisplayName": "Australia Central"
+    },
+    "australiacentral2": {
+      "Shortcode": "AUC2",
+      "DisplayName": "Australia Central 2"
+    },
+    "australiaeast": {
+      "Shortcode": "AUE",
+      "DisplayName": "Australia East"
+    },
+    "australiasoutheast": {
+      "Shortcode": "AUSE",
+      "DisplayName": "Australia Southeast"
+    },
+    "brazil": {
+      "Shortcode": "B",
+      "DisplayName": "Brazil"
+    },
+    "brazilsouth": {
+      "Shortcode": "BS",
+      "DisplayName": "Brazil South"
+    },
+    "brazilsoutheast": {
+      "Shortcode": "BSE",
+      "DisplayName": "Brazil Southeast"
+    },
+    "canada": {
+      "Shortcode": "CN",
+      "DisplayName": "Canada"
+    },
+    "canadacentral": {
+      "Shortcode": "CNC",
+      "DisplayName": "Canada Central"
+    },
+    "canadaeast": {
+      "Shortcode": "CNE",
+      "DisplayName": "Canada East"
+    },
+    "centralindia": {
+      "Shortcode": "CIN",
+      "DisplayName": "Central India"
+    },
+    "centralus": {
+      "Shortcode": "CU",
+      "DisplayName": "Central US"
+    },
+    "centraluseuap": {
+      "Shortcode": "CUE",
+      "DisplayName": "Central US EUAP"
+    },
+    "eastasia": {
+      "Shortcode": "EAS",
+      "DisplayName": "East Asia"
+    },
+    "eastus": {
+      "Shortcode": "EUS",
+      "DisplayName": "East US"
+    },
+    "eastus2": {
+      "Shortcode": "US2",
+      "DisplayName": "East US 2"
+    },
+    "eastus2euap": {
+      "Shortcode": "USP",
+      "DisplayName": "East US 2 EUAP"
+    },
+    "europe": {
+      "Shortcode": "EU",
+      "DisplayName": "Europe"
+    },
+    "france": {
+      "Shortcode": "FR",
+      "DisplayName": "France"
+    },
+    "francecentral": {
+      "Shortcode": "FRC",
+      "DisplayName": "France Central"
+    },
+    "francesouth": {
+      "Shortcode": "FRS",
+      "DisplayName": "France South"
+    },
+    "germany": {
+      "Shortcode": "G",
+      "DisplayName": "Germany"
+    },
+    "germanynorth": {
+      "Shortcode": "GN",
+      "DisplayName": "Germany North"
+    },
+    "germanywestcentral": {
+      "Shortcode": "GWC",
+      "DisplayName": "Germany West Central"
+    },
+    "global": {
+      "Shortcode": "GLB",
+      "DisplayName": "Global"
+    },
+    "india": {
+      "Shortcode": "IN",
+      "DisplayName": "India"
+    },
+    "japan": {
+      "Shortcode": "JP",
+      "DisplayName": "Japan"
+    },
+    "japaneast": {
+      "Shortcode": "JPE",
+      "DisplayName": "Japan East"
+    },
+    "japanwest": {
+      "Shortcode": "JPW",
+      "DisplayName": "Japan West"
+    },
+    "korea": {
+      "Shortcode": "KR",
+      "DisplayName": "Korea"
+    },
+    "koreacentral": {
+      "Shortcode": "KRC",
+      "DisplayName": "Korea Central"
+    },
+    "koreasouth": {
+      "Shortcode": "KRS",
+      "DisplayName": "Korea South"
+    },
+    "northcentralus": {
+      "Shortcode": "NCU",
+      "DisplayName": "North Central US"
+    },
+    "northeurope": {
+      "Shortcode": "NEU",
+      "DisplayName": "North Europe"
+    },
+    "norway": {
+      "Shortcode": "NR",
+      "DisplayName": "Norway"
+    },
+    "norwayeast": {
+      "Shortcode": "NRE",
+      "DisplayName": "Norway East"
+    },
+    "norwaywest": {
+      "Shortcode": "NRW",
+      "DisplayName": "Norway West"
+    },
+    "polandcentral": {
+      "Shortcode": "PC",
+      "DisplayName": "Poland Central"
+    },
+    "qatarcentral": {
+      "Shortcode": "QTC",
+      "DisplayName": "Qatar Central"
+    },
+    "singapore": {
+      "Shortcode": "S",
+      "DisplayName": "Singapore"
+    },
+    "southafrica": {
+      "Shortcode": "SA",
+      "DisplayName": "South Africa"
+    },
+    "southafricanorth": {
+      "Shortcode": "SAN",
+      "DisplayName": "South Africa North"
+    },
+    "southafricawest": {
+      "Shortcode": "SAW",
+      "DisplayName": "South Africa West"
+    },
+    "southcentralus": {
+      "Shortcode": "SCU",
+      "DisplayName": "South Central US"
+    },
+    "southeastasia": {
+      "Shortcode": "SEAS",
+      "DisplayName": "Southeast Asia"
+    },
+    "southindia": {
+      "Shortcode": "SIN",
+      "DisplayName": "South India"
+    },
+    "swedencentral": {
+      "Shortcode": "SC",
+      "DisplayName": "Sweden Central"
+    },
+    "switzerland": {
+      "Shortcode": "SZ",
+      "DisplayName": "Switzerland"
+    },
+    "switzerlandnorth": {
+      "Shortcode": "SZN",
+      "DisplayName": "Switzerland North"
+    },
+    "switzerlandwest": {
+      "Shortcode": "SZW",
+      "DisplayName": "Switzerland West"
+    },
+    "uaecentral": {
+      "Shortcode": "AEC",
+      "DisplayName": "UAE Central"
+    },
+    "uaenorth": {
+      "Shortcode": "AEN",
+      "DisplayName": "UAE North"
+    },
+    "uksouth": {
+      "Shortcode": "UKS",
+      "DisplayName": "UK South"
+    },
+    "ukwest": {
+      "Shortcode": "UKW",
+      "DisplayName": "UK West"
+    },
+    "unitedstates": {
+      "Shortcode": "US",
+      "DisplayName": "United States"
+    },
+    "westcentralus": {
+      "Shortcode": "WCU",
+      "DisplayName": "West Central US"
+    },
+    "westeurope": {
+      "Shortcode": "WEU",
+      "DisplayName": "West Europe"
+    },
+    "westindia": {
+      "Shortcode": "WIN",
+      "DisplayName": "West India"
+    },
+    "westus": {
+      "Shortcode": "WU",
+      "DisplayName": "West US"
+    },
+    "westus2": {
+      "Shortcode": "WU2",
+      "DisplayName": "West US 2"
+    },
+    "westus3": {
+      "Shortcode": "WU3",
+      "DisplayName": "West US 3"
+    }
+  }
+}
