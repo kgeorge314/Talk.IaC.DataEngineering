@@ -6,7 +6,8 @@
 
 - ✅ ToDo: Script to create an SPN
 - ✅ ToDo: Create RBAC with short term expiry
-- 🏗️ ToDo: Write Secret to KV 
+- ✅ ToDo: Write Secret to KV
+
 ### 2. Prepare IaC for Terraform
 
 - ✅ Deploy `bicep` file to your resource group
