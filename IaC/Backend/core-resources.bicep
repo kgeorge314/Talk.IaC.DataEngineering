@@ -10,6 +10,18 @@ param TenantId string
 @description('AAD ObjectIds that need access to the TF resources')
 param ObjectIds array 
 
+@description('SPN DisplayName')
+param SPNName string
+
+@description('SPN Secret')
+@secure()
+param SPNSecret string
+
+@description('SPN Secret Expiry UnixTime')
+param SPNSecretExpiry int
+
+
+
 var stateStorageAccountName = 'tf${uniqueString(resourceGroup().id)}'
 var stateStorageAccountContainerName = 'tf-state'
 var stateKeyVault = 'tf-kv-${uniqueString(resourceGroup().id)}'
@@ -90,3 +102,19 @@ resource keyVault 'Microsoft.KeyVault/vaults@2019-09-01' = {
     }
   }
 }
+
+resource secretAADSpn 'Microsoft.KeyVault/vaults/secrets@2023-02-01' ={
+  parent: keyVault
+  name: 'AADSpnSecret'
+  properties:{
+    value: SPNSecret
+    contentType: SPNName
+    attributes: {
+      enabled:true
+      exp:SPNSecretExpiry
+    }
+  }
+}
+
+output tf_state_storage_account_name string = tfStateStorageAccount.name
+output tf_state_storage_account_container_name string = tfStateStorageAccountContainer.name
