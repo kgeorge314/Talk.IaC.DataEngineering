@@ -52,6 +52,14 @@ $parameters = @{
     };
 }
 
+$deploymentName = "$((Get-Item $templateFile).Name)-$((New-Guid).Guid)"
 az group create --name $resourceGroupName --location $location 
-az deployment group create --resource-group $resourceGroupName  --template-file $templateFile --parameters "$($parameters | ConvertTo-Json -Compress)"
+az deployment group create --name $deploymentName --resource-group $resourceGroupName --template-file $templateFile --parameters "$($parameters | ConvertTo-Json -Compress)"
+
+$outputs = az deployment group show --resource-group $resourceGroupName --name $deploymentName --query properties.outputs | ConvertFrom-Json
+
+# Grant RBAC
+Write-Output "5. Grant Contributor Role for $($existingAdAppSpn.displayName)[$($existingAdAppSpn.id)]"
+
+az role assignment create --assignee-object-id $existingAdAppSpn.id --assignee-principal-type ServicePrincipal --role Contributor --scope "/subscriptions/$subId"
 
