@@ -1,6 +1,8 @@
   
 $cleanSubName = (az account show | ConvertFrom-Json).name -replace '[^a-zA-Z0-9 ]' , '_'
-$displayName = "IaC.AzSpn.Talk.$cleanSubName"
+$commitId = Invoke-Expression "git log --pretty=format:%h -n 1"
+$subId = az account show --query id --output tsv
+$displayName = "IaC.AzSpn.Talk.$cleanSubName.$commitId"
 $resourceGroupName = "Talk-IaC-DataEngineer.TerraformState"
 $location = "northeurope"
 
