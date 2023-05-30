@@ -63,3 +63,12 @@ Write-Output "5. Grant Contributor Role for $($existingAdAppSpn.displayName)[$($
 
 az role assignment create --assignee-object-id $existingAdAppSpn.id --assignee-principal-type ServicePrincipal --role Contributor --scope "/subscriptions/$subId"
 
+# Prepare Terraform
+$env:ARM_CLIENT_ID=$existingAdApp.appId
+$env:ARM_CLIENT_SECRET=$azADSecretsPlain.password
+$env:ARM_TENANT_ID=$tenantId
+$env:ARM_SUBSCRIPTION_ID=$subId
+$env:ARM_USE_AZUREAD ='true'
+
+$env:BACKEND_STORAGE_ACCOUNT = $outputs.tf_state_storage_account_name.value
+$env:BACKEND_STORAGE_ACCOUNT_CONTAINER = $outputs.tf_state_storage_account_container_name.value
