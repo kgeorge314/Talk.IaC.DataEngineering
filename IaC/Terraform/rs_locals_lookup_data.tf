@@ -1,0 +1,328 @@
+locals {
+  dataset_azure_locations = [
+    {
+      "Location" : "asia",
+      "DisplayName" : "Asia",
+      "ShortCode" : "AS"
+    },
+    {
+      "Location" : "asiapacific",
+      "DisplayName" : "Asia Pacific",
+      "ShortCode" : "ASP"
+    },
+    {
+      "Location" : "australia",
+      "DisplayName" : "Australia",
+      "ShortCode" : "AU"
+    },
+    {
+      "Location" : "australiacentral",
+      "DisplayName" : "Australia Central",
+      "ShortCode" : "AUC"
+    },
+    {
+      "Location" : "australiacentral2",
+      "DisplayName" : "Australia Central 2",
+      "ShortCode" : "AUC2"
+    },
+    {
+      "Location" : "australiaeast",
+      "DisplayName" : "Australia East",
+      "ShortCode" : "AUE"
+    },
+    {
+      "Location" : "australiasoutheast",
+      "DisplayName" : "Australia Southeast",
+      "ShortCode" : "AUSE"
+    },
+    {
+      "Location" : "brazil",
+      "DisplayName" : "Brazil",
+      "ShortCode" : "B"
+    },
+    {
+      "Location" : "brazilsouth",
+      "DisplayName" : "Brazil South",
+      "ShortCode" : "BS"
+    },
+    {
+      "Location" : "brazilsoutheast",
+      "DisplayName" : "Brazil Southeast",
+      "ShortCode" : "BSE"
+    },
+    {
+      "Location" : "canada",
+      "DisplayName" : "Canada",
+      "ShortCode" : "CN"
+    },
+    {
+      "Location" : "canadacentral",
+      "DisplayName" : "Canada Central",
+      "ShortCode" : "CNC"
+    },
+    {
+      "Location" : "canadaeast",
+      "DisplayName" : "Canada East",
+      "ShortCode" : "CNE"
+    },
+    {
+      "Location" : "centralindia",
+      "DisplayName" : "Central India",
+      "ShortCode" : "CIN"
+    },
+    {
+      "Location" : "centralus",
+      "DisplayName" : "Central US",
+      "ShortCode" : "CU"
+    },
+    {
+      "Location" : "centraluseuap",
+      "DisplayName" : "Central US EUAP",
+      "ShortCode" : "CUE"
+    },
+    {
+      "Location" : "eastasia",
+      "DisplayName" : "East Asia",
+      "ShortCode" : "EAS"
+    },
+    {
+      "Location" : "eastus",
+      "DisplayName" : "East US",
+      "ShortCode" : "EUS"
+    },
+    {
+      "Location" : "eastus2",
+      "DisplayName" : "East US 2",
+      "ShortCode" : "US2"
+    },
+    {
+      "Location" : "eastus2euap",
+      "DisplayName" : "East US 2 EUAP",
+      "ShortCode" : "USP"
+    },
+    {
+      "Location" : "europe",
+      "DisplayName" : "Europe",
+      "ShortCode" : "EU"
+    },
+    {
+      "Location" : "france",
+      "DisplayName" : "France",
+      "ShortCode" : "FR"
+    },
+    {
+      "Location" : "francecentral",
+      "DisplayName" : "France Central",
+      "ShortCode" : "FRC"
+    },
+    {
+      "Location" : "francesouth",
+      "DisplayName" : "France South",
+      "ShortCode" : "FRS"
+    },
+    {
+      "Location" : "germany",
+      "DisplayName" : "Germany",
+      "ShortCode" : "G"
+    },
+    {
+      "Location" : "germanynorth",
+      "DisplayName" : "Germany North",
+      "ShortCode" : "GN"
+    },
+    {
+      "Location" : "germanywestcentral",
+      "DisplayName" : "Germany West Central",
+      "ShortCode" : "GWC"
+    },
+    {
+      "Location" : "global",
+      "DisplayName" : "Global",
+      "ShortCode" : "GLB"
+    },
+    {
+      "Location" : "india",
+      "DisplayName" : "India",
+      "ShortCode" : "IN"
+    },
+    {
+      "Location" : "japan",
+      "DisplayName" : "Japan",
+      "ShortCode" : "JP"
+    },
+    {
+      "Location" : "japaneast",
+      "DisplayName" : "Japan East",
+      "ShortCode" : "JPE"
+    },
+    {
+      "Location" : "japanwest",
+      "DisplayName" : "Japan West",
+      "ShortCode" : "JPW"
+    },
+    {
+      "Location" : "korea",
+      "DisplayName" : "Korea",
+      "ShortCode" : "KR"
+    },
+    {
+      "Location" : "koreacentral",
+      "DisplayName" : "Korea Central",
+      "ShortCode" : "KRC"
+    },
+    {
+      "Location" : "koreasouth",
+      "DisplayName" : "Korea South",
+      "ShortCode" : "KRS"
+    },
+    {
+      "Location" : "northcentralus",
+      "DisplayName" : "North Central US",
+      "ShortCode" : "NCU"
+    },
+    {
+      "Location" : "northeurope",
+      "DisplayName" : "North Europe",
+      "ShortCode" : "NEU"
+    },
+    {
+      "Location" : "norway",
+      "DisplayName" : "Norway",
+      "ShortCode" : "NR"
+    },
+    {
+      "Location" : "norwayeast",
+      "DisplayName" : "Norway East",
+      "ShortCode" : "NRE"
+    },
+    {
+      "Location" : "norwaywest",
+      "DisplayName" : "Norway West",
+      "ShortCode" : "NRW"
+    },
+    {
+      "Location" : "polandcentral",
+      "DisplayName" : "Poland Central",
+      "ShortCode" : "PC"
+    },
+    {
+      "Location" : "qatarcentral",
+      "DisplayName" : "Qatar Central",
+      "ShortCode" : "QTC"
+    },
+    {
+      "Location" : "singapore",
+      "DisplayName" : "Singapore",
+      "ShortCode" : "S"
+    },
+    {
+      "Location" : "southafrica",
+      "DisplayName" : "South Africa",
+      "ShortCode" : "SA"
+    },
+    {
+      "Location" : "southafricanorth",
+      "DisplayName" : "South Africa North",
+      "ShortCode" : "SAN"
+    },
+    {
+      "Location" : "southafricawest",
+      "DisplayName" : "South Africa West",
+      "ShortCode" : "SAW"
+    },
+    {
+      "Location" : "southcentralus",
+      "DisplayName" : "South Central US",
+      "ShortCode" : "SCU"
+    },
+    {
+      "Location" : "southeastasia",
+      "DisplayName" : "Southeast Asia",
+      "ShortCode" : "SEAS"
+    },
+    {
+      "Location" : "southindia",
+      "DisplayName" : "South India",
+      "ShortCode" : "SIN"
+    },
+    {
+      "Location" : "swedencentral",
+      "DisplayName" : "Sweden Central",
+      "ShortCode" : "SC"
+    },
+    {
+      "Location" : "switzerland",
+      "DisplayName" : "Switzerland",
+      "ShortCode" : "SZ"
+    },
+    {
+      "Location" : "switzerlandnorth",
+      "DisplayName" : "Switzerland North",
+      "ShortCode" : "SZN"
+    },
+    {
+      "Location" : "switzerlandwest",
+      "DisplayName" : "Switzerland West",
+      "ShortCode" : "SZW"
+    },
+    {
+      "Location" : "uaecentral",
+      "DisplayName" : "UAE Central",
+      "ShortCode" : "AEC"
+    },
+    {
+      "Location" : "uaenorth",
+      "DisplayName" : "UAE North",
+      "ShortCode" : "AEN"
+    },
+    {
+      "Location" : "uksouth",
+      "DisplayName" : "UK South",
+      "ShortCode" : "UKS"
+    },
+    {
+      "Location" : "ukwest",
+      "DisplayName" : "UK West",
+      "ShortCode" : "UKW"
+    },
+    {
+      "Location" : "unitedstates",
+      "DisplayName" : "United States",
+      "ShortCode" : "US"
+    },
+    {
+      "Location" : "westcentralus",
+      "DisplayName" : "West Central US",
+      "ShortCode" : "WCU"
+    },
+    {
+      "Location" : "westeurope",
+      "DisplayName" : "West Europe",
+      "ShortCode" : "WEU"
+    },
+    {
+      "Location" : "westindia",
+      "DisplayName" : "West India",
+      "ShortCode" : "WIN"
+    },
+    {
+      "Location" : "westus",
+      "DisplayName" : "West US",
+      "ShortCode" : "WU"
+    },
+    {
+      "Location" : "westus2",
+      "DisplayName" : "West US 2",
+      "ShortCode" : "WU2"
+    },
+    {
+      "Location" : "westus3",
+      "DisplayName" : "West US 3",
+      "ShortCode" : "WU3"
+    }
+  ]
+
+  azure_location           = [for each in local.dataset_azure_locations : each if each.Location == var.location]
+  azure_location_shortcode = lower(tostring(local.azure_location[0].ShortCode))
+
+}
