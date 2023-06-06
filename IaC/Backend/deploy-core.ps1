@@ -1,7 +1,7 @@
   
 $cleanSubName = (az account show | ConvertFrom-Json).name -replace '[^a-zA-Z0-9 ]' , '_'
 $subId = az account show --query id --output tsv
-$myObjectId = az ad signed-in-user show --query id
+$myObjectId = az ad signed-in-user show --query id | ConvertFrom-Json
 $displayName = "IaC.AzSpn.Talk.$cleanSubName"
 $resourceGroupName = "Talk-IaC-DataEngineer.TerraformState"
 $location = "northeurope"
@@ -70,5 +70,5 @@ $env:ARM_TENANT_ID=$tenantId
 $env:ARM_SUBSCRIPTION_ID=$subId
 $env:ARM_USE_AZUREAD ='true'
 
-$env:BACKEND_STORAGE_ACCOUNT = $outputs.tf_state_storage_account_name.value
-$env:BACKEND_STORAGE_ACCOUNT_CONTAINER = $outputs.tf_state_storage_account_container_name.value
+$env:TF_STATE_BACKEND_STORAGE_ACCOUNT = $outputs.tf_state_storage_account_name.value
+$env:TF_STATE_BACKEND_STORAGE_ACCOUNT_CONTAINER = $outputs.tf_state_storage_account_container_name.value
