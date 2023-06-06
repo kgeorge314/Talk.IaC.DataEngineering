@@ -17,3 +17,16 @@ variable "environment" {
   }
   default = "sandbox"
 }
+
+variable "shared_sub_key_vault_name" {
+  description = "Common KeyVault Name"
+  type        = string
+}
+
+variable "shared_sub_key_vault_resource_group" {
+  description = "Common KeyVault Resource Group Name"
+  type        = string
+  default     = "Talk-IaC-DataEngineer.TerraformState"
+}
+
+
