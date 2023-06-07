@@ -11,4 +11,6 @@ output "adf_main" {
 output "st_main" {
   description = "Main Storage Account"
   value       = azurerm_storage_account.st_main
+  sensitive   = true
+
 }
