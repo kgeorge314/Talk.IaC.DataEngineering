@@ -61,7 +61,7 @@ $outputs = az deployment group show --resource-group $resourceGroupName --name $
 # Grant RBAC
 Write-Output "5. Grant Contributor Role for $($existingAdAppSpn.displayName)[$($existingAdAppSpn.id)]"
 
-az role assignment create --assignee-object-id $existingAdAppSpn.id --assignee-principal-type ServicePrincipal --role Contributor --scope "/subscriptions/$subId"
+az role assignment create --assignee-object-id $existingAdAppSpn.id --assignee-principal-type ServicePrincipal --role Owner --scope "/subscriptions/$subId"
 
 # Prepare Terraform
 $env:ARM_CLIENT_ID=$existingAdApp.appId
@@ -72,3 +72,9 @@ $env:ARM_USE_AZUREAD ='true'
 
 $env:TF_STATE_BACKEND_STORAGE_ACCOUNT = $outputs.tf_state_storage_account_name.value
 $env:TF_STATE_BACKEND_STORAGE_ACCOUNT_CONTAINER = $outputs.tf_state_storage_account_container_name.value
+
+# MyMachine Only
+$EncryptedSecureString = '780071007000640064006800780064007100730067003600360061006f0036007a00340036006c003700630069006c0072006f00320035006700650073006f00660034007a00790074007800720062006e0073006e00790032003600610032006100370061007100'
+$SecureString = ConvertTo-SecureString -String $EncryptedSecureString
+$credentialSecure = [pscredential]::new('AZURE_PAT', $Secure2)
+$env:AZURE_DEVOPS_EXT_PAT = $credentialSecure.GetNetworkCredential().Password 
