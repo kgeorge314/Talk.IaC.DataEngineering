@@ -46,7 +46,7 @@
     Invoke-Pester ./Talk.IaC.DataEngineering/Tests/Infra/rs_infra_core.Test.ps1 -Output Detailed
 ```
 
-### Apply
+### Destroy
 
 ```ps1
     Set-Location ./IaC/Terraform/  
