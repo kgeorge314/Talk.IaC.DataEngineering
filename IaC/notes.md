@@ -39,11 +39,23 @@
     terraform apply -input=false -auto-approve tfplan
 ```
 
+### Review
+
+1. Azure Portal
+    1. KeyVault / Secret
+    1. StateFile
+1. Azure DevOps
+    1. Config
+1. Run Tests
+    1. _Optional_ Manually Edit Global Parameter
+    1. _Optional_ Manually Add/Edit Global Parameter
+1. Tear Down
+
 ### Test
 
 ```ps1
     Pop-Location
-    Invoke-Pester ./Talk.IaC.DataEngineering/Tests/Infra/rs_infra_core.Test.ps1 -Output Detailed
+    Invoke-Pester ./Tests/Infra/rs_infra_core.Test.ps1 -Output Detailed
 ```
 
 ### Destroy
@@ -51,4 +63,5 @@
 ```ps1
     Set-Location ./IaC/Terraform/  
     terraform destroy -auto-approve
+
 ```
