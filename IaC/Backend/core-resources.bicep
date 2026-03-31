@@ -70,6 +70,7 @@ resource tfStateStorageAccountContainer 'Microsoft.Storage/storageAccounts/blobS
 }
 
 resource tfStateStorageAccountRoleAssignments 'Microsoft.Authorization/roleAssignments@2022-04-01' = [for objectId in ObjectIds: {
+  scope: tfStateStorageAccount
   name: guid('${tfStateStorageAccount.id}${objectId}')
   properties: {
     principalId: objectId
@@ -111,11 +112,14 @@ resource secretAADSpn 'Microsoft.KeyVault/vaults/secrets@2023-02-01' ={
   name: 'AADSpnSecret'
   properties:{
     value: SPNSecret
-    contentType: SPNName
+    contentType: 'text/plain'
     attributes: {
       enabled:true
       exp:SPNSecretExpiry
     }
+  }
+  tags: {
+    SPNName: SPNName
   }
 }
 
